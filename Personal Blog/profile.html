@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Personal Blog</title>
+		<meta charset="utf-8">
+		<script src="jq.js"></script>
+		<meta name="viewport" content="width-device-width",initial-scale=1>
+		<link rel="stylesheet" type="text/css" href="solo.css"/>
+		
+	</head>
+
+	<body background="image/background.jpg">
+		<header>
+			<p id="logo">SOLO</p>
+			<nav>
+				<li> <a href="solo.html">Home</a></li>
+				<li> <a href="profile.html">Profile</a></li>
+				<li> <a href="gallery.html">Gallery</a></li>
+				<li> <a href="contact.html">Contact</a></li>
+			</nav>
+		</header>
+        <section>
+                <li id="pro_pic"><img src="image/imran.jpg"></li>
+                <h1 id="e_h">Education History</h1><br>
+                <button id="psc">Primary</button><br>
+                <table id="psc_details">
+                    <tr>
+                        <th>Institute</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>Bhelapukur Govt. Primary School</td>
+                        <td>First Division</td>
+                    </tr>
+                </table><br>
+
+		        <script>
+                    $(document).ready(function(){
+                         $("#psc").click(function(){
+                             $("#psc_details").toggle();
+                         });
+                    });
+                </script>
+                <button id="ssc">SSC</button><br>
+                <table id="ssc_details">
+                    <tr>
+                        <th>Institute</th>
+                        <th>Section</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>Bhelajan High School</td>
+                        <td>Science</td>
+                        <td>GPA-5.00</td>
+                    </tr>
+                </table><br>
+
+		        <script>
+                    $(document).ready(function(){
+                         $("#ssc").click(function(){
+                             $("#ssc_details").toggle();
+                         });
+                    });
+                </script>
+                <button id="hsc">HSC</button><br>
+                <table id="hsc_details">
+                    <tr>
+                        <th>Institute</th>
+                        <th>Section</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>Thakurgoan Govt. College</td>
+                        <td>Science</td>
+                        <td>GPA-5.00</td>
+                    </tr>
+                </table><br>
+
+		        <script>
+                    $(document).ready(function(){
+                         $("#hsc").click(function(){
+                             $("#hsc_details").toggle();
+                         });
+                    });
+                </script>
+                <button id="grad">University</button><br>
+                <table id="grad_details">
+                    <tr>
+                        <th>Institute</th>
+                        <th>Department</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>University of Rajshahi</td>
+                        <td>Computer Science and Engineering</td>
+                        <td>Disastrous</td>
+                    </tr>
+                </table><br>
+
+		        <script>
+                    $(document).ready(function(){
+                         $("#grad").click(function(){
+                             $("#grad_details").toggle();
+                         });
+                    });
+                </script>
+		</section>
+		<footer>
+			<section>
+				<h1>SOLO</h1>
+				<h3>+8801764968900</h3>
+				Golden Shower<br>
+				Binodpur,Motihar,Rajshahi<br>
+			</section>
+			<section>
+				<ul class="social_links">
+					<li> <a href="https://www.facebook.com/mih133">
+<img border="0" alt="facebook" src="image/facebook.png" width="100" height="100"></a></li>
+					<li> <a href="https://plus.google.com/u/0/100176714962618354106?tab=wX">
+<img border="0" alt="google" src="image/google.png" width="100" height="100"></li>
+				</ul>
+			</section>
+		</footer>
+        <p id="copyright">&copy Copyright E-commerce Lab</p>
+	</body>
+</html>

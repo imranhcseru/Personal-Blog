@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Personal Blog</title>
+		<meta charset="utf-8">
+		<script src="jq.js"></script>
+		<meta name="viewport" content="width-device-width",initial-scale=1>
+		<link rel="stylesheet" type="text/css" href="solo.css"/>
+		
+	</head>
+
+	<body>
+		<header>
+			<p id="logo">SOLO</p>
+			<nav>
+				<li> <a href="solo.html">Home</a></li>
+				<li> <a href="profile.html">Profile</a></li>
+				<li> <a href="gallery.html">Gallery</a></li>
+				<li> <a href="contact.html">Contact</a></li>
+			</nav>
+		</header>
+        <section>
+            <style>
+                    * { padding: 0; margin: 0; }
+                    html { min-height: 100%; background: dimgrey; }
+                    .gallery { text-align: center; }
+                    .current-image-wrapper {
+                      background-position: 50% 50%;
+                      background-repeat: no-repeat;
+                    }
+                    .current-image-wrapper img {
+                      display: block;
+                      max-width: 100%;
+                      margin: 0 auto;
+                      opacity: 1;
+                      transition: opacity 1.85s;
+                    }
+                    .current-image-wrapper .hideme {
+                      opacity: 0;
+                      transition: opacity 0s;
+                    }
+                    .thumbnails li, .thumbnails a, .thumbnails img {
+                      display: inline-block;
+                      width: 4.5em;
+                      height: 3em;
+                      border: none;
+                    }
+                    .thumbnails a { outline: none; }
+            </style>
+               <div id='gallery' class='gallery'>
+              <div id='lg-wrap' class='current-image-wrapper'>
+                <img id='large' data-idx='0' src='http://i.space.com/images/i/5871/i02/PIA00104-1920.jpg'>
+              </div>
+              <ul id='thumbnails' class='thumbnails'>
+                <li>
+                  <a href='http://i.space.com/images/i/5871/i02/PIA00104-1920.jpg'>
+                    <img data-idx='0' src='image/img_1.jpg'>
+                  </a>
+                </li><!--
+                --><li>
+                  <a href='http://i.space.com/images/i/5874/i02/PIA00114-1920.jpg'>
+                    <img data-idx='1' src='image/img_2.jpg'>
+                  </a>
+                </li><!--
+                --><li>
+                  <a href='http://i.space.com/images/i/64/i02/enceladusFlyby-1920.jpg'>
+                    <img data-idx='2' src='image/img_3.jpg'>
+                  </a>
+                </li><!--
+                --><li>
+                  <a href='http://i.space.com/images/i/5880/i02/PIA00342-1920.jpg'>
+                    <img data-idx='3' src='image/img_4.jpg'>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <script>
+                var th = document.getElementById('thumbnails');
+
+                th.addEventListener('click', function(e) {
+                  var t = e.target, new_src = t.parentNode.href, 
+                      large = document.getElementById('large'),
+                      cl = large.classList,
+                      lgwrap = document.getElementById('lg-wrap');
+                  lgwrap.style.backgroundImage = 'url(' +large.src + ')';
+                  if(cl) cl.add('hideme');
+                  window.setTimeout(function(){
+                    large.src = new_src;
+                    if(cl) cl.remove('hideme');
+                  }, 50);
+                  e.preventDefault();
+                }, false);
+            </script>
+        </section>
+		<footer>
+			<section>
+				<h1>SOLO</h1>
+				<h3>+8801764968900</h3>
+				Golden Shower<br>
+				Binodpur,Motihar,Rajshahi<br>
+			</section>
+			<section>
+				<ul class="social_links">
+					<li> <a href="https://www.facebook.com/mih133">
+<img border="0" alt="facebook" src="image/facebook.png" width="100" height="100"></a></li>
+					<li> <a href="https://www.google.com">
+<img border="0" alt="google" src="https://plus.google.com/u/0/100176714962618354106?tab=wX" width="100" height="100"></li>
+				</ul>
+			</section>
+		</footer>
+        <p id="copyright">&copy Copyright E-commerce Lab</p>
+	</body>
+</html>
